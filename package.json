@@ -1,0 +1,24 @@
+{
+  "name": "poc-assembly-script",
+  "version": "1.0.0",
+  "description": "POC para testar o AssemblyScript e validar utilidade",
+  "main": "index.js",
+  "author": "Catharina Mesquita",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@assemblyscript/loader": "^0.18.31"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.18.31",
+    "assert": "^2.0.0",
+    "static-server": "^2.2.1"
+  },
+  "scripts": {
+    "asbuild:untouched": "asc assembly/index.ts --target debug",
+    "asbuild:optimized": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "test": "node tests",
+    "serve-demo": "yarn asbuild && static-server"
+  }
+}

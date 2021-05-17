@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>AssemblyScript Demos</title>
+        <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+
+          body {
+            height: 100vh;
+          }
+
+          body, form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: 2rem;
+          }
+
+          input {
+            font-size: 2rem;
+            width: 20%;
+          }
+
+          button {
+            padding: 1rem;
+            border: none;
+            background-color: gray;
+            border-radius: 0.25rem;
+            color: white;
+          }
+
+        </style>
+    </head>
+    <body>
+        <form id="form">
+            <label for="number1">First number</label>
+            <input name="number1" type="number" />
+
+            <label for="number2">Second number</label>
+            <input name="number2" type="number" />
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="result"></p>
+
+        <script src="demo.js"></script>
+    </body>
+</html>
